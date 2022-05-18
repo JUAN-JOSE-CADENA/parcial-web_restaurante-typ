@@ -8,6 +8,10 @@ function App() {
   return (
     <div className="App">
       {game.status === "created" && <Login handleStart={game.handleStart} />}
+
+      {game.status === "started" && (
+        <Menu board={game.board} handleClick={game.handleClick} />
+      )}
     </div>
   );
 }
